@@ -1,3 +1,9 @@
-#!/bin/bash
-pip install -r requirements.txt
-streamlit run predict.py --server.port $PORT --server.address 0.0.0.0
+mkdir -p ~/.streamlit/
+
+echo "\
+[server]\n\
+headless = true\n\
+port = $PORT\n\
+enableCORS = false\n\
+\n\
+" > ~/.streamlit/config.toml
